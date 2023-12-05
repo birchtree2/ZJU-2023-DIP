@@ -1,9 +1,10 @@
-/img
-/build
-/.vscode
+img
+build
+.vscode
 *.zip
 *.exe
 *.bmp
 *.jpg
+*.png
 *.docx
 *.pdf
