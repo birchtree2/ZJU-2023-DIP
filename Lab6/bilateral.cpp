@@ -1,5 +1,6 @@
 #include"bmplib.h"
 #include<cmath>
+#include "bilateral.h"
 BMP bilateralFilter(const BMP& in,int kernelSize,double spaceSigma,double colorSigma){
     BMP out(in);
     int height=in.getHeight(),width=in.getWidth();
