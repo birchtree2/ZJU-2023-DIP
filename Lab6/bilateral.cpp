@@ -20,7 +20,6 @@ BMP bilateralFilter(const BMP& in,int kernelSize,double spaceSigma,double colorS
             spaceWeights[offset]=exp(-d/(0.5*spaceSigma*spaceSigma));
         }
     }
-    std::cerr<<"fdf\n";
     for(int x=radius;x<height-radius;x++){
         for(int y=radius;y<width-radius;y++){
             rgb pixel=in.getRGB(x,y);//center pixel
@@ -44,6 +43,5 @@ BMP bilateralFilter(const BMP& in,int kernelSize,double spaceSigma,double colorS
             out.setRGB(x,y,rgb(BMP::solve(sumr),BMP::solve(sumg),BMP::solve(sumb)));
         }
     }
-    std::cerr<<"fdf\n";
     return out;
 }
