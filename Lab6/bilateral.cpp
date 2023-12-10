@@ -8,7 +8,7 @@ BMP bilateralFilter(const BMP& in,int kernelSize,double spaceSigma,double colorS
     int radius=kernelSize/2;
     int maxColor=256;
     vector<double>colorWeights(maxColor*3);
-    vector<double>spaceWeights(kernelSize*kernelSize);
+    vector<double>spaceWeights(kernelSize*kernelSize*2);
     for(int i=0;i<maxColor*3;i++){//因为是把r,g,b大小的差值相加,所以距离最大为3&2
         colorWeights[i]=exp(-i*i/(0.5*colorSigma*colorSigma));//exp(-x/2σ^2)
     }
