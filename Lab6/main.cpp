@@ -2,9 +2,9 @@
 #include<iostream>
 int main(){
     BMP in;
-    string fileName="test2";
+    string fileName="2236";
     in.read("./img/"+fileName+".bmp");
-    BMP out=bilateralFilter(in,5,18,0.1);
+    BMP out=bilateralFilter(in,15,80,80);
     out.write("./img/bilateral_"+fileName+".bmp");
 
 }
